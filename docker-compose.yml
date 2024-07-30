@@ -1,0 +1,29 @@
+version: '1'
+
+services:
+  # MYSQL
+  db:
+    image: mysql:8.4
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=verysecurepassword
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    links:
+      - db:db
+
+  # APACHE
+  apache:
+    image: lavoweb/php-8.3
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - db:database
