@@ -1,11 +1,17 @@
 # Test dev web Tremplin
 
-## Démarrer
+## Rendu
+
+<span style="color:red">**Rendre le projet sur github, en dépôt publique, envoyer le lien
+à [production@majordhom.fr](mailto:production@majordhom.fr), si vous m'envoyez un fichier zip je regarde pas. :)**</span>
+
+
+## Démarrer la stack LAMP (optionnel)
+_Vous pouvez aussi monter votre propre serveur de développement._
 
 Cloner le repo github
 > git clone https://github.com/Majordhom/test-tremplin.git
 
-### Optionnel
 Démarer la stack Apache / Mysql / PhpMyAdmin avec docker.
 
 > docker compose up -d
@@ -31,10 +37,5 @@ Le but est de montrer ce que vous savez faire:
 - Intégrer une maquette front avec minutie
 - Connaissance d'un framework front ou back (React, Angular, Typescript, Laravel, Symfony, NextJS ...) 
 - Autres outils pour la gestion de dates, d'un captcha etc.
-
-## Rendu
-
-Rendre le projet sur github, envoyer le lien à [production@majordhom.fr](mailto:production@majordhom.fr)
-
 
 Bonne chance !
