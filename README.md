@@ -5,6 +5,16 @@
 <span style="color:red">**Rendre le projet sur github, en dépôt publique, envoyer le lien
 à [production@majordhom.fr](mailto:production@majordhom.fr), si vous m'envoyez un fichier zip je regarde pas. :)**</span>
 
+Le README.md de votre projet doit comprendre : 
+ - Un petit résumé sur vous : nom / prénom, niveau d'étude, durée du stage, etc.
+ - Un screenshot de la page créée
+ - Comment démarrer l'environnement de votre projet
+ - Les réponses à ces questions (pas besoin d'écrire un roman)
+   - Avez-vous trouvé l'exercice facile ou vous a-t-il posé des difficultés ? Si oui, lesquelles ?
+   - Avez-vous appris de nouveaux outils pour répondre à l'exercice ? Si oui, lesquels ?
+   - Pourquoi avoir choisi d'utiliser ces outils ?
+   - Avez-vous utilisé la stack proposée ? Utilisez-vous régulièrement docker ?
+
 
 ## Démarrer la stack LAMP (optionnel)
 _Vous pouvez aussi monter votre propre serveur de développement._
