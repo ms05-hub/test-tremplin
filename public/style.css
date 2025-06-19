@@ -1,0 +1,118 @@
+/* Reset global */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #f8f8f8; font-family: 'Montserrat', Arial, sans-serif; color: #111; }
+
+.contact-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: url('salon.png') center/cover no-repeat;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.contact-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30,30,30,0.45);
+  z-index: 1;
+}
+
+.contact-form { position: relative; z-index: 2; max-width: 100%; margin: 0 auto; }
+.contact-form h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.form-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+@media (max-width: 900px) { .form-section { grid-template-columns: 1fr; } }
+
+h3, h4 { color: #fff; font-weight: 600; letter-spacing: 1px; margin-bottom: 10px; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+fieldset {
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+}
+legend { padding: 0 8px; font-weight: 500; color: #fff; }
+
+.civilite label, .demande label { color: #fff; margin-right: 18px; font-weight: 500; }
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  width: 100%; padding: 12px 18px; margin-bottom: 12px;
+  border: none; border-radius: 20px;
+  background: rgba(255,255,255,0.85);
+  font-size: 1rem; font-family: inherit; color: #333;
+  outline: none;
+}
+::placeholder { color: #bbb; }
+textarea { min-height: 110px; resize: vertical; }
+
+.row { display: flex; gap: 15px; margin-bottom: 12px; }
+.form-group { flex: 1; }
+
+.dispos { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+.ajouter-dispo {
+  background: #5b2d91; color: #fff; border: none; border-radius: 18px;
+  padding: 8px 18px; font-weight: 600; cursor: pointer; transition: background 0.2s;
+}
+.ajouter-dispo:hover { background: #7c3aed; }
+.liste-dispos { color: #fff; font-size: 0.9rem; margin-bottom: 15px; }
+.liste-dispos .dispo-item {
+  display: inline-flex; align-items: center;
+  background: rgba(255,255,255,0.2); border-radius: 12px;
+  padding: 6px 10px; margin-right: 6px;
+}
+.liste-dispos .dispo-item button { background: transparent; border: none; color: #fff; margin-left: 6px; cursor: pointer; }
+
+.envoyer-btn {
+  display: inline-block; float: right;
+  background: #ffb300; color: #fff;
+  border: none; border-radius: 22px;
+  padding: 14px 50px; font-size: 1.1rem; font-weight: 700;
+  letter-spacing: 1px; cursor: pointer; transition: background 0.2s;
+  margin-top: 18px;
+}
+.envoyer-btn:hover { background: #ff9800; }
+@media (max-width: 900px) { .envoyer-btn { float: none; width: 100%; text-align: center; } }
+
+.success-message, .error-message {
+  position: relative; z-index: 2;
+  max-width: 1400px; margin: 20px auto;
+  padding: 12px; border-radius: 8px; text-align: center;
+}
+.success-message { background: #4caf50; color: #fff; }
+.error-message   { background: #f44336; color: #fff; }
+.dispos {
+  display: flex;
+  flex-wrap: nowrap; /* pas de retour à la ligne */
+  gap: 10px;
+}
+
+.dispos select {
+  width: auto;      /* taille minimale nécessaire */
+  flex: 0 0 auto;   /* ne pas grandir ni rétrécir */
+}
+/* Honeypot : on cache totalement ce champ pour l’utilisateur */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+}
